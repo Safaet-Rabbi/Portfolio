@@ -63,15 +63,7 @@ html{
     height: 400px;
 }
 
-/* Responsive adjustments for mobile devices */
-@media (max-width: 768px) {
-    .home-img-responsive {
-        width: 100%; /* Make the image full width on smaller screens */
-        height: 300px; /* Adjust height automatically to maintain aspect ratio */
-        max-width: 300px; /* Optionally set a max width to prevent it from getting too large */
-        border-radius: 100%;
-    }
-}
+
 
 /* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
@@ -296,6 +288,7 @@ span{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
+
 .services {
     padding: 50px;
   
