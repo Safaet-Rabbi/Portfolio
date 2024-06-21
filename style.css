@@ -55,7 +55,92 @@ html{
     font-weight: 600;
     cursor: default;
 }
+/* Add this CSS code to your existing stylesheet */
 
+/* General styles for home section */
+.home-img-responsive {
+    width: 500px;
+    height: 400px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    .home-img-responsive {
+        width: 100%; /* Make the image full width on smaller screens */
+        height: 300px; /* Adjust height automatically to maintain aspect ratio */
+        max-width: 300px; /* Optionally set a max width to prevent it from getting too large */
+        border-radius: 100%;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    /* Adjustments for mobile devices */
+    html {
+        font-size: 50%;
+    }
+
+    /* Header */
+    .header {
+        padding: 2rem 3%; /* Adjust padding for smaller screens */
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        display: none;
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 2rem 0; /* Adjust margin for smaller screens */
+    }
+
+    /* Home Section */
+    .home {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        text-align: center; /* Center align text */
+    }
+
+    .home-content {
+        order: 2; /* Place home content below the image */
+        padding: 2rem; /* Add padding for better spacing */
+    }
+
+    .home-content h1 {
+        font-size: 4rem; /* Adjust font size for smaller screens */
+    }
+
+    .home-img {
+        order: 1; /* Place image above home content */
+        margin-bottom: 2rem; /* Add margin for spacing */
+    }
+
+    .home-img img {
+        width: 80%; /* Adjust image width for smaller screens */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .social-media a {
+        margin: 1.5rem 1rem 1.5rem 0; /* Adjust margin for better spacing */
+    }
+}
 .navbar a{
     font-size: 1.7rem;
     color: var(--text-color);
