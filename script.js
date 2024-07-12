@@ -49,7 +49,7 @@ ScrollReveal({
    ScrollReveal().reveal('.home-contact p, .about-img', { origin: 'right' });
 
    const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'Programmer'],
+    strings: ['Full Stack Developer', 'Programmer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
