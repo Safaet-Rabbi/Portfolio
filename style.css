@@ -555,18 +555,39 @@ section{
     background: var(--first-bg-color);
 }
 
-.skills h2 {
+.skills .heading {
     text-align: center;
     font-size: 4.5rem;
     margin-bottom: 20px;
 }
 
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     align-items: center;
+    width: 100%;
+}
+
+.frontend, .backend {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subheading {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
 }
 
 .skill-box {
