@@ -56,4 +56,9 @@ ScrollReveal({
     loop: true
     
    });
-   
+   document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+        duration: 1000, // Duration of the animations in milliseconds
+        once: false,     // Whether animation should happen only once
+    });
+});
