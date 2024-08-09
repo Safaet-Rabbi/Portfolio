@@ -23,6 +23,8 @@
 body{
     background-color: var(--bg-color) ;
     color: var(--text-color);
+    overflow: hidden;
+    margin: 0;
 }
 section{
     min-height: 100vh;
@@ -341,19 +343,19 @@ span{
 /* Portfolio Section Styling */
 .portfolio {
     background: var(--second-bg-color);
-    padding: 50px;
+    padding: 50px 2px; /* Add padding for smaller screens */
 }
 
 .portfolio h2 {
     margin-bottom: 4rem;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem; /* Reduce font size for smaller screens */
 }
 
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust min-width to ensure proper spacing */
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust min-width for better responsiveness */
+    gap: 2rem;
     justify-content: center;
 }
 
@@ -367,14 +369,14 @@ span{
     justify-content: center;
     background: #fff;
     box-sizing: border-box;
-    height: 400px; /* Increase the height */
-    width: 100%; /* Ensure it takes full width */
+    height: 350px; /* Slightly reduce height for smaller screens */
+    width: 100%;
 }
 
 .portfolio-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure image covers the box properly */
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
@@ -410,19 +412,19 @@ span{
 }
 
 .description .title {
-    font-size: 2rem;
+    font-size: 1.8rem; /* Adjust font size for better readability */
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
 .description p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
 .description .features small {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -430,7 +432,7 @@ span{
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Slightly reduce font size */
     margin-bottom: 1rem;
 }
 
@@ -458,7 +460,93 @@ span{
 .description a i {
     margin-right: 0.5rem;
 }
+@media only screen and (max-width: 600px) {
+    .portfolio-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller cards */
+        gap: 1rem; /* Reduce gap between cards */
+    }
 
+    .portfolio-box {
+        height: 200px; /* Reduce card height */
+        width: 100%; /* Ensure it takes full width */
+    }
+
+    .portfolio-box img {
+        height: 100px; /* Adjust image height */
+    }
+
+    .portfolio-layer {
+        padding: 0.5rem; /* Reduce padding inside the card */
+    }
+
+    .description .title {
+        font-size: 1.2rem; /* Smaller title font */
+    }
+
+    .description p {
+        font-size: 1rem; /* Smaller paragraph font */
+    }
+
+    .description .features small {
+        font-size: 0.9rem; /* Smaller feature font */
+    }
+
+    .description .technologies span {
+        padding: 0.1rem 0.3rem; /* Smaller padding for tech labels */
+        font-size: 0.9rem; /* Smaller font for tech labels */
+    }
+
+    .description a {
+        padding: 0.3rem 0.7rem; /* Smaller button size */
+        font-size: 1rem; /* Smaller button font */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .portfolio h2 {
+        font-size: 2.5rem; /* Further reduce the font size for tablets */
+    }
+    
+    .portfolio-box {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .description .title {
+        font-size: 1.6rem;
+    }
+
+    .description p,
+    .description .features small,
+    .description .technologies {
+        font-size: 1rem; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio h2 {
+        font-size: 2rem; /* Reduce font size for mobile phones */
+    }
+    
+    .portfolio-container {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+        gap: 1.5rem; /* Adjust gap for smaller screens */
+    }
+    
+    .portfolio-box {
+        height: 280px; /* Reduce height further for mobile */
+    }
+
+    .description .title {
+        font-size: 1.4rem; /* Further reduce title size */
+    }
+
+    .description p,
+    .description .features small,
+    .description .technologies {
+        font-size: 0.9rem; /* Adjust font size for mobile */
+    }
+}
 
 .contact{
     background: rgba(5, 54, 79, 0.997);
@@ -677,3 +765,4 @@ section{
 .skill-box:hover {
     transform: scale(1.05);
 }
+
