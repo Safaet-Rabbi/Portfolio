@@ -275,7 +275,7 @@ span{
   .about-img::before,
   .about-img:after
    {
-    background: linear-gradient(25deg,#89ff00,rgba(190, 14, 96, 0.726),rgb(0, 128, 0));
+    background: linear-gradient(25deg,lightcyan,darkcyan);
   }
   
 .heading{
